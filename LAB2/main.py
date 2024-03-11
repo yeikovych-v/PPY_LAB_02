@@ -70,18 +70,20 @@ Extend the previous Python program to include tuples. Now, in addition to creati
   ```
 """
 
-# # Input
-# input_numbers = input("Enter a series of space-separated integers: ")
-#
-# # Convert Input:
-#
-#
-# # Sorting:
-#
-#
-# # Print Output
-# print("Sorted list:", numbers_list)
-# print("Sorted tuple:", sorted_tuple)
+# Input
+input_numbers = input("Enter a series of space-separated integers: ")
+
+# Convert Input:
+numbers_list = [eval(i) for i in input_numbers.split(" ")]
+sorted_tuple = tuple(numbers_list)
+
+# Sorting:
+numbers_list = sorted(numbers_list)
+sorted_tuple = sorted(sorted_tuple)
+
+# Print Output
+print("Sorted list:", numbers_list)
+print("Sorted tuple:", sorted_tuple)
 
 """5.
 Extend the previous Python program to demonstrate the manipulation of lists using the append(), insert(), and remove() functions, and to emphasize the immutability of tuples.
