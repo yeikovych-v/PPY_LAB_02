@@ -275,83 +275,83 @@ Additionally, introduce sets and dictionaries and perform basic operations on th
 ```
 """
 
-# Input
-input_numbers = input("Enter a series of space-separated integers: ")
-
-# Convert Input
-numbers_list = [eval(i) for i in input_numbers.split(" ")]
-numbers_tuple = tuple(numbers_list)
-numbers_set = set(numbers_tuple)
-numbers_dict = {}
-
-for index, element in enumerate(numbers_tuple):
-    numbers_dict[index] = element
-
-# Manipulate List
-numbers_list.append(10)
-numbers_list.insert(2, 20)
-numbers_list.remove(8)
-
-# Attempt to Modify Tuple (this will raise an error)
-try:
-    numbers_tuple.append(10)
-except AttributeError:
-    print("Tuples are immutable and cannot be modified.")
-
-# Set Operations
-set_union = numbers_set.union({2, 3, 8})
-set_intersection = numbers_set.intersection({2, 3, 8})
-set_difference = numbers_set.difference({2, 3, 8})
-
-# Dictionary Operations
-print("Original Dictionary:", numbers_dict)
-numbers_dict[10] = 8888
-del numbers_dict[0]
-
-# Type Conversion
-list_to_tuple = tuple(numbers_list)
-list_to_set = set(numbers_list)
-list_to_dict = {}
-
-for index, element in enumerate(numbers_list):
-    list_to_dict[index] = element
-
-tuple_to_list = list(numbers_tuple)
-tuple_to_set = set(numbers_tuple)
-tuple_to_dict = {}
-
-for index, element in enumerate(numbers_tuple):
-    tuple_to_dict[index] = element
-
-set_to_list = list(numbers_set)
-set_to_tuple = tuple(numbers_set)
-set_to_dict = {}
-
-for index, element in enumerate(numbers_set):
-    set_to_dict[index] = element
-
-dict_to_list = list()
-for key, value in numbers_dict.items():
-    dict_to_list.append(value)
-
-dict_to_tuple = tuple(dict_to_list)
-dict_to_set = set()
-for key, value in numbers_dict.items():
-    dict_to_set.add(value)
-
-# Print Output
-print("List to Tuple:", list_to_tuple)
-print("List to Set:", list_to_set)
-print("List to Dictionary:", list_to_dict)
-print("Tuple to List:", tuple_to_list)
-print("Tuple to Set:", tuple_to_set)
-print("Tuple to Dictionary:", tuple_to_dict)
-print("Set to List:", set_to_list)
-print("Set to Tuple:", set_to_tuple)
-print("Set to Dictionary:", set_to_dict)
-print("Dictionary to List:", dict_to_list)
-print("Dictionary to Tuple:", dict_to_tuple)
-print("Dictionary to Set:", dict_to_set)
+# # Input
+# input_numbers = input("Enter a series of space-separated integers: ")
+#
+# # Convert Input
+# numbers_list = [eval(i) for i in input_numbers.split(" ")]
+# numbers_tuple = tuple(numbers_list)
+# numbers_set = set(numbers_tuple)
+# numbers_dict = {}
+#
+# for index, element in enumerate(numbers_tuple):
+#     numbers_dict[index] = element
+#
+# # Manipulate List
+# numbers_list.append(10)
+# numbers_list.insert(2, 20)
+# numbers_list.remove(8)
+#
+# # Attempt to Modify Tuple (this will raise an error)
+# try:
+#     numbers_tuple.append(10)
+# except AttributeError:
+#     print("Tuples are immutable and cannot be modified.")
+#
+# # Set Operations
+# set_union = numbers_set.union({2, 3, 8})
+# set_intersection = numbers_set.intersection({2, 3, 8})
+# set_difference = numbers_set.difference({2, 3, 8})
+#
+# # Dictionary Operations
+# print("Original Dictionary:", numbers_dict)
+# numbers_dict[10] = 8888
+# del numbers_dict[0]
+#
+# # Type Conversion
+# list_to_tuple = tuple(numbers_list)
+# list_to_set = set(numbers_list)
+# list_to_dict = {}
+#
+# for index, element in enumerate(numbers_list):
+#     list_to_dict[index] = element
+#
+# tuple_to_list = list(numbers_tuple)
+# tuple_to_set = set(numbers_tuple)
+# tuple_to_dict = {}
+#
+# for index, element in enumerate(numbers_tuple):
+#     tuple_to_dict[index] = element
+#
+# set_to_list = list(numbers_set)
+# set_to_tuple = tuple(numbers_set)
+# set_to_dict = {}
+#
+# for index, element in enumerate(numbers_set):
+#     set_to_dict[index] = element
+#
+# dict_to_list = list()
+# for key, value in numbers_dict.items():
+#     dict_to_list.append(value)
+#
+# dict_to_tuple = tuple(dict_to_list)
+# dict_to_set = set()
+# for key, value in numbers_dict.items():
+#     dict_to_set.add(value)
+#
+# # Print Output
+# print("List to Tuple:", list_to_tuple)
+# print("List to Set:", list_to_set)
+# print("List to Dictionary:", list_to_dict)
+# print("Tuple to List:", tuple_to_list)
+# print("Tuple to Set:", tuple_to_set)
+# print("Tuple to Dictionary:", tuple_to_dict)
+# print("Set to List:", set_to_list)
+# print("Set to Tuple:", set_to_tuple)
+# print("Set to Dictionary:", set_to_dict)
+# print("Dictionary to List:", dict_to_list)
+# print("Dictionary to Tuple:", dict_to_tuple)
+# print("Dictionary to Set:", dict_to_set)
 
 """8.
 Extend the previous Python program to write the output to a file and perform operations on that file.
