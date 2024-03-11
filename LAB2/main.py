@@ -193,46 +193,46 @@ Additionally, introduce sets and dictionaries and perform basic operations on th
   ```
 """
 
-# Input
-input_numbers = input("Enter a series of space-separated integers: ")
-
-# Convert Input
-numbers_list = [eval(i) for i in input_numbers.split(" ")]
-numbers_tuple = tuple(numbers_list)
-numbers_set = set(numbers_tuple)
-numbers_dict = {}
-
-for index, element in enumerate(numbers_tuple):
-    numbers_dict[index] = element
-
-# Manipulate List
-numbers_list.append(10)
-numbers_list.insert(2, 20)
-numbers_list.remove(8)
-
-# Attempt to Modify Tuple (this will raise an error)
-try:
-    numbers_tuple.append(10)
-except AttributeError:
-    print("Tuples are immutable and cannot be modified.")
-
-# Set Operations
-set_union = numbers_set.union({2, 3, 8})
-set_intersection = numbers_set.intersection({2, 3, 8})
-set_difference = numbers_set.difference({2, 3, 8})
-
-# Dictionary Operations
-print("Original Dictionary:", numbers_dict)
-numbers_dict[10] = 8888
-del numbers_dict[0]
-
-# Print Output
-print("Modified list:", numbers_list)
-print("Tuple remains unchanged:", numbers_tuple)
-print("Union of set:", set_union)
-print("Intersection of set:", set_intersection)
-print("Difference of set:", set_difference)
-print("Updated Dictionary:", numbers_dict)
+# # Input
+# input_numbers = input("Enter a series of space-separated integers: ")
+#
+# # Convert Input
+# numbers_list = [eval(i) for i in input_numbers.split(" ")]
+# numbers_tuple = tuple(numbers_list)
+# numbers_set = set(numbers_tuple)
+# numbers_dict = {}
+#
+# for index, element in enumerate(numbers_tuple):
+#     numbers_dict[index] = element
+#
+# # Manipulate List
+# numbers_list.append(10)
+# numbers_list.insert(2, 20)
+# numbers_list.remove(8)
+#
+# # Attempt to Modify Tuple (this will raise an error)
+# try:
+#     numbers_tuple.append(10)
+# except AttributeError:
+#     print("Tuples are immutable and cannot be modified.")
+#
+# # Set Operations
+# set_union = numbers_set.union({2, 3, 8})
+# set_intersection = numbers_set.intersection({2, 3, 8})
+# set_difference = numbers_set.difference({2, 3, 8})
+#
+# # Dictionary Operations
+# print("Original Dictionary:", numbers_dict)
+# numbers_dict[10] = 8888
+# del numbers_dict[0]
+#
+# # Print Output
+# print("Modified list:", numbers_list)
+# print("Tuple remains unchanged:", numbers_tuple)
+# print("Union of set:", set_union)
+# print("Intersection of set:", set_intersection)
+# print("Difference of set:", set_difference)
+# print("Updated Dictionary:", numbers_dict)
 
 """7. **Built-in Types and Type Conversion**
 
