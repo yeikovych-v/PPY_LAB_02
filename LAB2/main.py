@@ -27,17 +27,17 @@ Write a Python program that takes input from the user to create a list of intege
   ```
 """
 
-# Input
-input_numbers = input("Enter a series of space-separated integers: ")
-
-# Convert Input:
-numbers_list = [eval(i) for i in input_numbers.split(" ")]
-
-# Sorting:
-numbers_list = sorted(numbers_list)
-
-# Print Output
-print("Sorted list:", numbers_list)
+# # Input
+# input_numbers = input("Enter a series of space-separated integers: ")
+#
+# # Convert Input:
+# numbers_list = [eval(i) for i in input_numbers.split(" ")]
+#
+# # Sorting:
+# numbers_list = sorted(numbers_list)
+#
+# # Print Output
+# print("Sorted list:", numbers_list)
 
 """-----------------------------------------------------------------------------
 
