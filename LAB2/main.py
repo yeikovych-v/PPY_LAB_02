@@ -26,6 +26,7 @@ Write a Python program that takes input from the user to create a list of intege
   Sorted list: [1, 2, 5, 8, 9]
   ```
 """
+import math
 import re
 
 # # Input
@@ -495,7 +496,6 @@ fileModify.write("Number Ints: " + str(num_ints) + "\n")
 fileModify.write("Sum Ints: " + str(sum_ints) + "\n")
 fileModify.close()
 
-
 """--------------------------------------------------------------------------------
 **Control Statements:**
 Control statements are used in programming to alter the flow of execution based on certain conditions or criteria. In Python, commonly used control statements include:
@@ -554,8 +554,47 @@ These are fundamental constructs in Python programming that enable you to contro
   The program will generate the list of prime numbers up to 20, perform calculations, and write the results to 'prime_numbers.txt'.
 """
 
+list_integers = re.findall(r'\d+', contents)
+if len(list_integers) == 0:
+    list_integers = {0}
+largest_integer = max(map(int, list_integers))
+print("Largest Int: " + str(largest_integer))
 
 
+def generate_prime(up_to):
+    prime_nums = []
+    for num in range(2, up_to + 1):
+        if all(num % i != 0 for i in range(2, int(math.sqrt(num) + 1))):
+            prime_nums.append(num)
+    return prime_nums
+
+
+primes = generate_prime(largest_integer)
+filePrimes = open("prime_numbers.txt", "w")
+
+if len(primes) > 0:
+    sum_primes = sum(primes)
+    min_prime = min(primes)
+    max_prime = max(primes)
+    is_largest_max_prime = max_prime == largest_integer
+
+    print("All primes: " + str(primes))
+    print("Sum of all primes: " + str(sum_primes))
+    print("Smallest prime: " + str(min_prime))
+    print("Largest prime: " + str(max_prime))
+    print("Is the largest prime actually the largest integer in file?: " + str(is_largest_max_prime))
+
+    filePrimes.write("All primes: " + str(primes))
+    filePrimes.write("Sum of all primes: " + str(sum_primes))
+    filePrimes.write("Smallest prime: " + str(min_prime))
+    filePrimes.write("Largest prime: " + str(max_prime))
+    filePrimes.write("Is the largest prime actually the largest integer in file?: " + str(is_largest_max_prime))
+else:
+    print("Not possible to generate prime, no big enough integers in numbers.txt file.")
+
+    filePrimes.write("Not possible to generate prime, no big enough integers in numbers.txt file.")
+
+filePrimes.close()
 """10.
 In the final main.py file, leave the results from task 8 and 9, commit and push
 """
